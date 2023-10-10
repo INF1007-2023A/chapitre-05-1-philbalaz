@@ -10,29 +10,47 @@ def convert_to_absolute(number: float) -> float:
         number = -number
     return number
 
-
 def use_prefixes() -> List[str]:
     prefixes, suffixe = 'JKLMNOPQ', 'ack'
-    List = []
-    for lettre in prefixes:
-        List.append(lettre + suffixe)
+    valeur = []
+    for i in prefixes:
+        valeur.append(i + suffixe)
+    return valeur
 
-    return List
 
 
 def prime_integer_summation() -> int:
-    return 0
+    somme = 0
+    n=0
+    nombre=2
+    nombre_premier = []
+    while n < 100:
+        premier = True
+        for j in range(2, nombre-1):
+            if nombre/j == nombre//j:
+                premier = False
+        if premier != False:
+            somme += nombre
+            n+=1
+        nombre+=1
+    return somme
 
 
 def factorial(number: int) -> int:
-    return 0
+    for i in range(1, number):
+        number *= i
+    return number
 
 
 def use_continue() -> None:
-    pass
+    for i in range(1,11):
+        if i == 5:
+            continue
+        print(i)
 
 
 def verify_ages(groups: List[List[int]]) -> List[bool]:
+    l=[]
     return []
 
 
